@@ -2,15 +2,15 @@
 @font-face {
     font-family: 'dm-serif-display';
     src: url('assets/fonts/DMSerifDisplay-Regular.ttf') format('truetype');
-  }
+}
 @font-face {
-  font-family: 'dm-serif-display-italic';
-  src: url('assets/fonts/DMSerifDisplay-Italic.ttf') format('truetype');
+font-family: 'dm-serif-display-italic';
+src: url('assets/fonts/DMSerifDisplay-Italic.ttf') format('truetype');
 }
 @font-face {
     font-family: 'dm-sans';
     src: url('assets/fonts/DMSans.ttf') format('truetype');
-  }
+}
 /*Estilos de texto*/
 p{
     font-family: 'dm-sans';
@@ -20,45 +20,79 @@ p{
 header{
     display: flex;
 }
+
 header h1{
     margin: 0 auto 0 auto;
     font-family: 'dm-serif-display';
     color: #A62103;
-
 }
+
 img{
     width: 50%;
 }
-header h1 span br{
+
+header, h1 , span , br{
 }
+
 header img{
     width: 2em;
     height: 2em;
     align-self: flex-end;
 }
+
 nav{
     display: flex;
+    background: darkred;
+    border-bottom: 5px solid red;
+    padding-left: 0;
+    justify-content: space-evenly;
     flex-direction: row;
-    justify-content:space-evenly;
 }
+
 nav a{
     padding: 10px;
+    list-style: none;
+    margin: 0px 10px;
+    color: white;
+    text-transform: uppercase;
+    padding: 15px;
+    font-family: 'dm-sans';
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 1px;
+    text-decoration: none;
 }
-.info h3{
+
+.info{
     font-family: 'dm-serif-display-italic';
+    display: flex;
+    justify-content: center;
+    background-color: lightcoral;
 }
+
 
  /*Left mueve el section afectado a la izquierda y right a la derecha */
 .left{
     display: flex;
     justify-content: flex-start;
 }
+
 .right{
     display: flex;
     justify-content: flex-end;
 }
 
+.fundas , .descripcion{
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+}
 
+.img-stickers{
+    display: flex;
+    justify-content:space-evenly
+}
 /*media queries*/
 
 /*estilos para tablets pequeñas*/
