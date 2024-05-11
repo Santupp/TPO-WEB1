@@ -1,9 +1,35 @@
+/*Fuentes*/
+@font-face {
+    font-family: 'dm-serif-display';
+    src: url('assets/fonts/DMSerifDisplay-Regular.ttf') format('truetype');
+  }
+@font-face {
+  font-family: 'dm-serif-display-italic';
+  src: url('assets/fonts/DMSerifDisplay-Italic.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'dm-sans';
+    src: url('assets/fonts/DMSans.ttf') format('truetype');
+  }
+/*Estilos de texto*/
+p{
+    font-family: 'dm-sans';
+}
+
+
 header{
     display: flex;
+}
+header h1{
+    margin: 0 auto 0 auto;
+    font-family: 'dm-serif-display';
+    color: #A62103;
 
 }
+img{
+    width: 50%;
+}
 header h1 span br{
-    margin-left: 40px;
 }
 header img{
     width: 2em;
@@ -12,9 +38,14 @@ header img{
 }
 nav{
     display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
 }
 nav a{
     padding: 10px;
+}
+.info h3{
+    font-family: 'dm-serif-display-italic';
 }
 
 .left{
@@ -24,4 +55,21 @@ nav a{
 .right{
     display: flex;
     justify-content: flex-end;
+}
+
+
+/*media queries*/
+
+/*estilos para tablets pequeñas*/
+@media (width >= 620px){
+
+}
+/*estilos para tablets grandes y laptops*/
+@media (width >= 960px){
+
+}
+/*estilos para desktop*/
+
+@media (width >= 1200px){
+
 }
