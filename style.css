@@ -16,7 +16,7 @@ nav{
 nav a{
     padding: 10px;
 }
-
+ /*Left mueve el section afectado a la izquierda y right a la derecha */
 .left{
     display: flex;
     justify-content: flex-start;
