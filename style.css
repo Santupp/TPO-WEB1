@@ -48,6 +48,7 @@ nav a{
     font-family: 'dm-serif-display-italic';
 }
 
+ /*Left mueve el section afectado a la izquierda y right a la derecha */
 .left{
     display: flex;
     justify-content: flex-start;
