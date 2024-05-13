@@ -27,49 +27,58 @@ header h1{
     color: #A62103;
 }
 
-img{
-    width: 50%;
-}
 
-header, h1 , span , br{
-}
 
-header img{
-    width: 2em;
-    height: 2em;
-    align-self: flex-end;
-}
 
 nav{
-    display: flex;
-    background: darkred;
-    border-bottom: 5px solid red;
-    padding-left: 0;
-    justify-content: space-evenly;
-    flex-direction: row;
-}
-
-nav a{
-    padding: 10px;
-    list-style: none;
-    margin: 0px 10px;
-    color: white;
-    text-transform: uppercase;
-    padding: 15px;
-    font-family: 'dm-sans';
-    font-weight: bold;
-    letter-spacing: 2px;
-    line-height: 1px;
     text-decoration: none;
 }
+nav ul{
+    display: flex;
+    background: darkred;
+    border-bottom: 3px solid #590C04;
+    
+    justify-content: space-between;
+    
+}
+nav ul li{
+    list-style-type: none;
+    align-content: center;
+}
+
+nav ul li a{
+    font-weight: bold;
+    font-family: 'dm-sans';
+    letter-spacing: 1px;
+    line-height: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+    list-style: none;
+    color: white;
+}
+nav a img{
+    margin-right: 2em;
+    width: 1.5em;
+}
+.nav-left{
+       
+margin: -2em;
+}
+
+
 
 .info{
     font-family: 'dm-serif-display-italic';
     display: flex;
-    justify-content: center;
-    background-color: lightcoral;
 }
-
+.info h3{
+    margin-top: 0.5em;
+}
+.celular{
+    width: 40%;
+    height: 40%;
+    
+}
 
  /*Left mueve el section afectado a la izquierda y right a la derecha */
 .left{
@@ -82,16 +91,10 @@ nav a{
     justify-content: flex-end;
 }
 
-.fundas , .descripcion{
-    flex-flow: column;
-    justify-content: space-around;
-    align-items: center;
-    display: flex;
-}
+
 
 .img-stickers{
-    display: flex;
-    justify-content:space-evenly
+    width: 20%;
 }
 /*media queries*/
 
