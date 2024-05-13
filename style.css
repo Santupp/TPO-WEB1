@@ -15,7 +15,13 @@ src: url('assets/fonts/DMSerifDisplay-Italic.ttf') format('truetype');
 p{
     font-family: 'dm-sans';
 }
-
+/*TODO
+    .Completar el nav, hacer que los items de la izquierda esten mas juntos y ver que hacerle al carrito para que no quede tan feo
+    .Formulario, un club de miembros.
+    .Captcha, al completar el formulario hay que realizar un captcha
+    .Precios de los productos
+    .Estilizar el button de productos destacados
+*/
 
 header{
     display: flex;
@@ -57,28 +63,54 @@ nav ul li a{
     color: white;
 }
 nav a img{
-    margin-right: 2em;
+    margin-right: 1em;
     width: 1.5em;
 }
 .nav-left{
-       
 margin: -2em;
 }
 
 
 
-.info{
+.destacados{
     font-family: 'dm-serif-display-italic';
     display: flex;
 }
-.info h3{
+.destacados h3{
     margin-top: 0.5em;
 }
+.title{
+    font-family: 'dm-serif-display-italic';
+}
+.box-info{
+    margin-left: 1em;
+}
+.box-info button{
+    margin-top: 1em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: 'dm-sans';
+    font-weight: bold;
+    border-radius: 3px;
+    color: white;
+    background-color: #590C04;
+
+}
+.descripcion p  {
+    margin-top: -0.1em;
+    font-size: 12px;
+}
+.title{
+    margin-bottom: 0;
+    font-size: 23px;
+}
+
 .celular{
     width: 40%;
     height: 40%;
     
 }
+
 
  /*Left mueve el section afectado a la izquierda y right a la derecha */
 .left{
