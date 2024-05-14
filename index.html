@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+
     <title>Document</title>
 </head>
 <body>
@@ -14,8 +15,8 @@
 
     <nav>
         <ul>
-            <li><a class="nav-left" href="#">Inicio</a></li>
-            <li><a class="nav-left" href="#">Productos</a></li>
+            <li><a class="nav-left" href="index.html">Inicio</a></li>
+            <li><a class="nav-left" href="productos.html">Productos</a></li>
             <li><a class="nav-right" href="#"><img src="assets/img/icons8-cart.svg" alt="Carrito"></a></li>
         </ul>
             
@@ -42,10 +43,10 @@
     <section class="right">
         <div class="box-info">
             <p class="title">Funda Studio Ghilbi</p>
-            <div class="descripcion">
+        <div class="descripcion">
                 <p>Ponele onda a tu celu con nuestra funda de Studio Ghilbi!</p>
                 <button>Comprar</button>
-            </div>
+        </div>
         </div>
         <img class="celular" src="assets/img/funda-ghilbi.png" alt="">
     </section>
@@ -54,10 +55,10 @@
         <img class="celular" src="assets/img/funda-gorillaz.png" alt="">
         <div class="box-info">
             <p class="title">Funda Gorillaz</p>
-            <div class="descripcion">
+        <div class="descripcion">
                 <p>Ponele onda a tu celu con nuestra funda de Gorillaz! </p>
                 <button>Comprar</button>
-            </div>
+        </div>
         </div>
     </section>
 
@@ -70,9 +71,41 @@
 
 </article>
 
+<article>
+    <div class="suscripcion">
+        <h3>¿Te interesaria recibir una mistery box todos los meses por tan solo $15.000?</h3>
+    <div class="subs">
+        <h4>Entonces completa el siguiente formulario:</h4>
+        <form id="formulario">
+            <div>
+                <label>Nombre:</label>
+            <input type="text" required>
+            </div>
+            <div>
+                <label>Email:</label>
+            <input type="email" required>
+            </div>
+            <div>
+                <label>Contraseña:</label>
+            <input type="password" required>
+            </div>
+            <div class="captcha">
+                <label>Captcha:</label>
+                <input type="text" id="captcha" required>
+                <span id="textocaptcha"></span>
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+        <div id="validacion"></div>
+    </div>
+</article>
+
 <footer>
     <a href=""><p>FAQS</p></a>
     <a href=""><p>Contacto</p></a>
 </footer>
+
+<script type="text/javascript" src="js/main.js"></script>
+
 </body>
 </html>
