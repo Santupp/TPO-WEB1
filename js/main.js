@@ -2,9 +2,9 @@
 document.getElementById('textocaptcha').textContent = generarCaptcha();
 document.getElementById('formulario').addEventListener('submit', function (e) {
     e.preventDefault();
-    let I = document.getElementById('captcha').value;
-    let G = document.getElementById('textocaptcha').textContent;
-    if (I == G) {
+    let captchaValue = document.getElementById('captcha').value;
+    let captchaUser = document.getElementById('textocaptcha').textContent;
+    if (captchaValue == captchaUser) {
         document.getElementById('validacion').textContent = "El formulario se ha enviado correctamente";
     } else {
         document.getElementById('validacion').textContent = "Captcha incorrecto, intentalo nuevamente.";

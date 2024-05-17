@@ -11,17 +11,24 @@ src: url('assets/fonts/DMSerifDisplay-Italic.ttf') format('truetype');
     font-family: 'dm-sans';
     src: url('assets/fonts/DMSans.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'sanrio';
+    src: url('assets/fonts/Keepsmile.otf') format('truetype');
+}
 /*Estilos de texto*/
 p{
     font-family: 'dm-sans';
 }
+a{
+    text-decoration: none;
+}
+
 /*TODO
     .Completar el nav, hacer que los items de la izquierda esten mas juntos y ver que hacerle al carrito para que no quede tan feo
-    .Css del formulario + poner buenos nombres a las clases
+    .Formulario, un club de miembros.
+    .Captcha, al completar el formulario hay que realizar un captcha
     .Precios de los productos
     .Estilizar el button de productos destacados
-    .Chequar la semantica html (att noa)
-    .Falta un html
 */
 
 header{
@@ -44,6 +51,7 @@ nav ul{
     display: flex;
     background: darkred;
     border-bottom: 3px solid #590C04;
+    
     justify-content: space-between;
     
 }
@@ -67,10 +75,46 @@ nav a img{
     width: 1.5em;
 }
 .nav-left{
-margin: -2em;
+    margin: -2em;
 }
 
-.destacados, .precio{
+.mistery-box{
+    border: 3px solid #ffb6c1;
+    border-right: 3px solid #ffb6c1;
+    border-radius: 8px;
+    background-color: #F6F7C4;
+    background-image: url("assets/img/question-mark.png");
+    background-repeat: repeat;  
+}
+.mistery-box-text{
+    display: flex;
+    justify-content: center;
+    color: #ffb6c1;
+
+}
+.mistery-box-text p{
+    font-family: 'sanrio';
+    font-size: 2em;
+    margin-top: 0.2em;
+    margin-bottom: 0;
+    letter-spacing: 3px;
+}
+
+.mistery-box-text img{
+    width: 3em;
+    align-self: baseline;
+    margin-top: 0.2em;
+    margin-left: 0.5em;
+}
+.mistery-box-img{
+    height: 10em;
+    display: flex;
+    justify-content: center;
+}
+.mistery-box-info p{
+    color: #4f2f17;
+}
+.destacados{
     font-family: 'dm-serif-display-italic';
     display: flex;
 }
@@ -92,6 +136,7 @@ margin: -2em;
     border-radius: 3px;
     color: white;
     background-color: #590C04;
+
 }
 .descripcion p  {
     margin-top: -0.1em;
@@ -108,6 +153,7 @@ margin: -2em;
     
 }
 
+
  /*Left mueve el section afectado a la izquierda y right a la derecha */
 .left{
     display: flex;
@@ -119,41 +165,10 @@ margin: -2em;
     justify-content: flex-end;
 }
 
+
+
 .img-stickers{
     width: 20%;
-}
-
-footer{
-    background-color: #A62103;
-}
-footer a{
-    font-weight: bold;
-    font-family: 'dm-sans';
-    text-decoration: none;
-    text-transform: uppercase;
-    list-style: none;
-    color: white;
-}
-
-/* css prductos*/
-.suscripcion, .subs{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        flex-direction: column;
-        padding-bottom: 2%;
-}
-
-.contenedor{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    align-items: baseline;
-}
-
-.porta-sube , .llavero , .charm{
-    width: 80%;
 }
 /*media queries*/
 
@@ -161,45 +176,12 @@ footer a{
 @media (width >= 620px){
 
 }
-
 /*estilos para tablets grandes y laptops*/
 @media (width >= 960px){
 
 }
-
 /*estilos para desktop*/
+
 @media (width >= 1200px){
-h1{
-    font-size: 60px;
-}
-
-nav{
-    font-size: 20px;
-}
-
-.title{
-    font-size: 35px;
-}
-
-p,label,#textocaptcha,h3, h4 ,.descripcion p  {
-    font-size: 25px;
-}
-
-.celular{
-    width: 15%;
-    height: 15%;
-    }
-
-.box-info button ,.captcha button{
-    font-size: 20px;
-}
-
-.suscripcion{
-    display: flex;
-    align-items: center;
-}
-.productos{
-    margin-inline: 10px;
-}
 
 }
