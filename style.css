@@ -30,15 +30,19 @@ a{
     .Precios de los productos
     .Estilizar el button de productos destacados
 */
-
+body{
+    background: rgba(206, 202, 202, 0.2) /* Fondo gris con 20% de opacidad */
+}
 header{
     display: flex;
+    justify-content: center;
 }
 
 header h1{
     margin: 0 auto 0 auto;
     font-family: 'dm-serif-display';
     color: #A62103;
+    font-size: 3em;
 }
 
 
@@ -48,10 +52,12 @@ nav{
     text-decoration: none;
 }
 nav ul{
-    display: flex;
-    background: darkred;
-    border-bottom: 3px solid #590C04;
     
+    display: flex;
+    background: #A62103;
+    border-bottom: 3px solid #590C04;
+    border-top: 3px solid #A62103;
+
     justify-content: space-between;
     
 }
@@ -79,11 +85,12 @@ nav a img{
 }
 
 .mistery-box{
-    border: 3px solid #ffb6c1;
-    border-right: 3px solid #ffb6c1;
+    border: 3px solid #FFF78A;
+    /* border-right: 3px solid #FFF78A; */
     border-radius: 8px;
     background-color: #F6F7C4;
     background-image: url("assets/img/question-mark.png");
+
     background-repeat: repeat;  
 }
 .mistery-box-text{
@@ -110,15 +117,26 @@ nav a img{
     height: 10em;
     display: flex;
     justify-content: center;
+    opacity: 0.8;
+
+}
+.mistery-box-img:hover{
+    opacity: 1;
 }
 .mistery-box-info p{
     color: #4f2f17;
+    text-align: center;
+
 }
 .destacados{
     font-family: 'dm-serif-display-italic';
     display: flex;
+    justify-content: center;
 }
+
 .destacados h3{
+    
+    font-size: 2em;
     margin-top: 0.5em;
 }
 .title{
@@ -133,6 +151,7 @@ nav a img{
     text-transform: uppercase;
     font-family: 'dm-sans';
     font-weight: bold;
+    border-color: #7f5550;
     border-radius: 3px;
     color: white;
     background-color: #590C04;
@@ -174,7 +193,6 @@ nav a img{
 
 /*estilos para tablets pequeñas*/
 @media (width >= 620px){
-
 }
 /*estilos para tablets grandes y laptops*/
 @media (width >= 960px){
@@ -183,5 +201,8 @@ nav a img{
 /*estilos para desktop*/
 
 @media (width >= 1200px){
-
+    body{
+        margin: 0 auto 0 auto;
+        width:900px;
+    }
 }

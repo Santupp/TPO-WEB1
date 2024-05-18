@@ -10,7 +10,7 @@ document.getElementById('formulario').addEventListener('submit', function (e) {
         document.getElementById('validacion').textContent = "Captcha incorrecto, intentalo nuevamente.";
     }
     });
-
+    
     function generarCaptcha() {
     let captcha = "";
     let c = "abcdefghijklmnopqrstuvwxyz0123456789";
@@ -18,4 +18,4 @@ document.getElementById('formulario').addEventListener('submit', function (e) {
       captcha += c.charAt(Math.floor(Math.random() * c.length));
     }
     return captcha;
-}
+    }
