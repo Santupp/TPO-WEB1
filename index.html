@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="js/main.js" async></script>
+    <script type="text/javascript" src="js/nav.js" async></script>
 
     <title>Document</title>
 </head>
@@ -17,15 +17,26 @@
 
     <nav>
         <div class="dropdown">
-            
-        </div>
-        <ul>
-            <li><a class="nav-left" href="index.html">Inicio</a></li>
-            <li><a class="nav-left" href="productos.html">Productos</a></li>
-            <li><a class="nav-right" href="#"><img src="assets/img/icons8-cart.svg" alt="Carrito"></a></li>
-        </ul>
+            <button type="button" id="nav-btn-open" class="">
+                <img src="assets/img/menu.png" alt=""> Menu
+            </button>
+            </div>
+            <div class="nav-list">
+                <ul id="nav-ul" class="hidden">
+                    <li><a class="nav-left" href="index.html">Inicio</a></li>
+                    <li><a class="nav-left" href="productos.html">Productos</a></li>
+        
+                    <li><a class="nav-right" href="#"><img src="assets/img/icons8-cart.svg" alt="Carrito"></a></li>
+                
+                </ul>
+            <button type="button" id="nav-btn-close" class="hidden">
+                <img src="assets/img/menu.png" alt="">a
+            </button>        
+            </div>
+
 
     </nav>
+
         <div class="mistery-box">
             <a href="html/misterybox.html">
             <div class="mistery-box-text">

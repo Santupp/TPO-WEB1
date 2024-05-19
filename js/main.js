@@ -1,3 +1,4 @@
+"use strict";
 //captcha main
 document.getElementById('textocaptcha').textContent = generarCaptcha();
 document.getElementById('formulario').addEventListener('submit', function (e) {
@@ -12,10 +13,11 @@ document.getElementById('formulario').addEventListener('submit', function (e) {
     });
     
     function generarCaptcha() {
-    let captcha = "";
-    let c = "abcdefghijklmnopqrstuvwxyz0123456789";
-    for (let i = 0; i < 6; i++) {
-      captcha += c.charAt(Math.floor(Math.random() * c.length));
+        let captcha = "";
+        let c = "abcdefghijklmnopqrstuvwxyz0123456789";
+        for (let i = 0; i < 6; i++) {
+            captcha += c.charAt(Math.floor(Math.random() * c.length));
+        }
+        return captcha;
     }
-    return captcha;
-    }
+
