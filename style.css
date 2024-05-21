@@ -24,18 +24,15 @@ a{
 }
 
 /*TODO
-    .Completar el nav, hacer que los items de la izquierda esten mas juntos y ver que hacerle al carrito para que no quede tan feo
-    .Formulario, un club de miembros.
-    .Captcha, al completar el formulario hay que realizar un captcha
-    .Precios de los productos
-    .Estilizar el button de productos destacados
+    .FIJARSE NAV EN MYSTERY BOX
+    .fijarse desktop
 */
 body{
-    background: rgba(206, 202, 202, 0.2) /* Fondo gris con 20% de opacidad */
+    background: rgba(206, 202, 202, 0.297) /* Fondo gris con 30% de opacidad */
 }
 header{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 header h1{
@@ -43,16 +40,18 @@ header h1{
     font-family: 'dm-serif-display';
     color: #A62103;
     font-size: 3em;
+    justify-content: center;
 }
 
 
-.dropdown{
+.dropdown #nav-btn-open ,#nav-btn-close{
+    color: white;
+    background-color: #A62103;
 }
 .hidden{
     display: none;
 }
 nav{
-
     text-decoration: none;
 }
 .nav-list{
@@ -94,54 +93,17 @@ nav a img{
     margin-right: 1em;
     width: 1.5em;
 }
+
+#nav-ul.show {
+    display: flex;
+}
+
+
+
 .nav-left{
     margin: -2em;
 }
 
-.mistery-box{
-    border: 3px solid #FFF78A;
-    /* border-right: 3px solid #FFF78A; */
-    border-radius: 8px;
-    background-color: #F6F7C4;
-    background-image: url("assets/img/question-mark.png");
-
-    background-repeat: repeat;  
-}
-.mistery-box-text{
-    display: flex;
-    justify-content: center;
-    color: #ffb6c1;
-
-}
-.mistery-box-text p{
-    font-family: 'sanrio';
-    font-size: 2em;
-    margin-top: 0.2em;
-    margin-bottom: 0;
-    letter-spacing: 3px;
-}
-
-.mistery-box-text img{
-    width: 3em;
-    align-self: baseline;
-    margin-top: 0.2em;
-    margin-left: 0.5em;
-}
-.mistery-box-img{
-    height: 10em;
-    display: flex;
-    justify-content: center;
-    opacity: 0.8;
-
-}
-.mistery-box-img:hover{
-    opacity: 1;
-}
-.mistery-box-info p{
-    color: #4f2f17;
-    text-align: center;
-
-}
 .destacados{
     font-family: 'dm-serif-display-italic';
     display: flex;
@@ -149,7 +111,6 @@ nav a img{
 }
 
 .destacados h3{
-    
     font-size: 2em;
     margin-top: 0.5em;
 }
@@ -159,7 +120,7 @@ nav a img{
 .box-info{
     margin-left: 1em;
 }
-.box-info button{
+.box-info button , #nav-btn-open{
     margin-top: 1em;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -198,25 +159,142 @@ nav a img{
     justify-content: flex-end;
 }
 
+/* css prductos*/
+.suscripcion, .subs{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-bottom: 2%;
+}
 
+.contenedor{
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+flex-wrap: wrap;
+align-items: baseline;
+}
+
+.porta-sube , .llavero , .charm{
+width: 80%;
+}
 
 .img-stickers{
     width: 20%;
 }
+
+/*mystery box*/
+.mistery-box{
+    border: 3px solid #FFF78A;
+    /* border-right: 3px solid #FFF78A; */
+    border-radius: 8px;
+    background-color: #F6F7C4;
+    background-image: url("assets/img/question-mark.png");
+    background-repeat: repeat;
+}
+.mistery-box-text{
+    display: flex;
+    justify-content: center;
+    color: #ffb6c1;
+}
+.mistery-box-text p{
+    font-family: 'sanrio';
+    font-size: 2em;
+    margin-top: 0.2em;
+    margin-bottom: 0;
+    letter-spacing: 3px;
+}
+
+.mistery-box-text img{
+    width: 3em;
+    align-self: baseline;
+    margin-top: 0.2em;
+    margin-left: 0.5em;
+}
+.mistery-box-img{
+    height: 10em;
+    display: flex;
+    justify-content: center;
+    opacity: 0.8;
+
+}
+.mistery-box-img:hover{
+    opacity: 1;
+}
+.mistery-box-info p{
+    color: #4f2f17;
+    text-align: center;
+
+}
+/*mystery box*/
+.texto-box{
+    border-radius: 8px;
+    background-color: #a621031d;
+}
+.info-box, .nombre-box{
+    font-family: 'dm-serif-display';
+}
+.descripcion-box, .titulo-box, .formulario-main{
+    font-family: 'dm-serif-display';
+    display: flex;
+    justify-content: center;
+}
+.descripcion-box, label, .btn-captcha, input .captcha{
+    font-size: 19px;
+}
+/*tabla*/
+table {
+    border: 2px solid rgba(247, 87, 87, 0.467);
+    letter-spacing: 1px;
+    font-size: 19px;
+    background-color: rgba(253, 110, 110, 0.138);
+}
+td, th {
+    border: 1px solid rgba(253, 110, 110, 0.414);
+    padding: 10px 20px;
+}
+td {
+    text-align: center
+    background-color: rgba(253, 110, 110, 0.414);
+}
+.tabla {
+    margin-bottom: 20px; /* Espacio en la parte de abajo de la tabla */
+}
+
+
 /*media queries*/
 
 /*estilos para tablets pequeñas*/
 @media (width >= 620px){
+    body{
+        margin: auto;
+        width: 800px;
+    }
 }
 /*estilos para tablets grandes y laptops*/
 @media (width >= 960px){
-
+    body{
+        margin: auto;
+        width: 900px;
+    }
 }
 /*estilos para desktop*/
 
-@media (width >= 1200px){
-    body{
-        margin: 0 auto 0 auto;
-        width:900px;
+@media (min-width: 1200px) {
+    body {
+        margin: auto;
+        width: 1100px;
+    }
+    /*nav*/
+    .btn-menu {
+        display: none;
+    }
+    ul.hidden {
+        display: flex;
+        flex-direction: row;
+    }
+    header{
+        justify-content: center;
     }
 }
