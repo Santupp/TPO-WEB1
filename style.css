@@ -200,13 +200,23 @@ nav a img{
 }
 
 .contenedor{
-display: flex;
-flex-direction: row;
-justify-content: space-around;
-flex-wrap: wrap;
-align-items: baseline;
-}
+display: grid;
+grid-template-columns: 1fr 1fr;
 
+
+}
+.productos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #A62103;
+    margin: 1em 1em 1em 1em;
+
+}
+.productos img{
+    height: 300px;
+}
 .porta-sube , .llavero , .charm{
 width: 80%;
 }
@@ -275,6 +285,9 @@ width: 80%;
     font-size: 19px;
 }
 /*tabla*/
+.container-tabla{
+    overflow-x: auto;
+}
 table {
     border: 2px solid rgba(247, 87, 87, 0.467);
     letter-spacing: 1px;

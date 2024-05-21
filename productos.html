@@ -22,19 +22,22 @@
 
     </header>
 
-    <nav>
-            <div class="nav-list">
-                <ul id="nav-ul" class="hidden">
-                    <li><a class="nav-left" href="index.html">Inicio</a></li>
-                    <li><a class="nav-left" href="productos.html">Productos</a></li>
-        
-                    <li><a class="nav-right" href="#"><img src="assets/img/icons8-cart.svg" alt="Carrito"></a></li>
-                
-                </ul>
-            <button type="button" id="nav-btn-close" class="hidden">
+    <nav> 
+        <div class="nav-list">
+            <ul id="nav-ul" class="hidden">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>        
+                <li class="dark-mode-li">
+                    Modo oscuro 
+                    <button type="button" aria-label="dark mode button" title="dark mode button" id="dark-mode-btn" class="hidden">
+                            <img src="assets/img/dark-mode.png" alt="">
+                    </button>
+                </li>
+            </ul>
+            <button aria-label="menu button" title="menu button" type="button" id="nav-btn-close" class="hidden">
                 <img src="assets/img/menu.png" alt="">
             </button>
-            </div>
+        </div>
     </nav>
 
     <div class="productos">
@@ -134,8 +137,10 @@
 </article>
 
 <footer>
+    <p>© 2024 Fuego tiene.</p>
     <a href=""><p>FAQS</p></a>
     <a href=""><p>Contacto</p></a>
 </footer>
+
 </body>
 </html>

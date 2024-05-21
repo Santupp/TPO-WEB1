@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mistery Box</title>
     <link rel="stylesheet" href="../style.css">
-    <script type="text/javascript" src="../js/main.js" async></script>
-    <script type="text/javascript" src="../js/nav.js" async></script>
+    <script type="text/javascript" src="js/main.js" async></script>
+    <script type="text/javascript" src="js/nav.js" async></script>
     <script type="text/javascript" src="js/darkMode.js" async></script>
 
 </head>
@@ -24,18 +24,21 @@
     </header>
 
     <nav>
-            <div class="nav-list">
-                <ul id="nav-ul" class="hidden">
-                    <li><a href="/index.html">Inicio</a></li>
-                    <li><a href="/TPO-WEB1/productos.html">Productos</a></li>
-        
-                    <li><a href="#"><img src="../assets/img/icons8-cart.svg" alt="Carrito"></a></li>
-                
-                </ul>
-            <button type="button" id="nav-btn-close" class="hidden">
+        <div class="nav-list">
+            <ul id="nav-ul" class="hidden">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>        
+                <li class="dark-mode-li">
+                    Modo oscuro 
+                    <button type="button" aria-label="dark mode button" title="dark mode button" id="dark-mode-btn" class="hidden">
+                            <img src="assets/img/dark-mode.png" alt="">
+                    </button>
+                </li>
+            </ul>
+            <button aria-label="menu button" title="menu button" type="button" id="nav-btn-close" class="hidden">
                 <img src="../assets/img/menu.png" alt="">
             </button>
-            </div>
+        </div>
     </nav>
 
     <article class="main">
@@ -46,6 +49,8 @@
     </article>
     
     <article class="tabla">
+        <div class="container-tabla">
+
         <table>
             <tr>
                 <td class="info-box">Tipos de mystery box</td>
@@ -84,6 +89,7 @@
                 <td>$20.750</td>
                 <td>Aquellos que juegan Genshin Impact regularmente y están profundamente involucrados en la comunidad del juego.</td>
             </tr>
+        </table>
     </article>
 
     <article class="formulario-main">
