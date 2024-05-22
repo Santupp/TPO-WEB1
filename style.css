@@ -15,6 +15,10 @@ src: url('assets/fonts/DMSerifDisplay-Italic.ttf') format('truetype');
     font-family: 'sanrio';
     src: url('assets/fonts/Keepsmile.otf') format('truetype');
 }
+@font-face {
+    font-family: 'gothic';
+    src: url('assets/fonts/gothic.otf') format('truetype');
+}
 .dark-mode {
     background-color: #343434;
     color: #F9F6EE;
@@ -190,14 +194,8 @@ nav a img{
     justify-content: flex-end;
 }
 
-/* css prductos*/
-.suscripcion, .subs{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-    padding-bottom: 2%;
-}
+/* css productos*/
+
 
 .contenedor{
 display: grid;
@@ -273,9 +271,11 @@ width: 80%;
     background-color: #a621031d;
 }
 .info-box, .nombre-box{
-    font-family: 'dm-serif-display', 'Times New Roman', Times, serif;
+    font-family: 'sanrio', 'Times New Roman', Times, serif;
+    color: #F6F7C4;
+    font-size: 1.2em;
 }
-.descripcion-box, .titulo-box, .formulario-main{
+.descripcion-box, .titulo-box{
     font-family: 'dm-serif-display', 'Times New Roman', Times, serif;
     display: flex;
     justify-content: center;
@@ -286,6 +286,10 @@ width: 80%;
 /*tabla*/
 .container-tabla{
     overflow-x: auto;
+}
+.descripcion-table{
+    font-family: 'gothic', 'Times New Roman', Times, serif;
+    color: #A76565;
 }
 table {
     border: 2px solid rgba(247, 87, 87, 0.467);
@@ -298,13 +302,57 @@ td, th {
     padding: 10px 20px;
 }
 td {
+    
     text-align: center;
     background-color: rgba(253, 110, 110, 0.414);
 }
 .tabla {
     margin-bottom: 20px; /* Espacio en la parte de abajo de la tabla */
 }
+/*Form*/
+.subs{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 2%;
+}
+.descripcion-box, label, .btn-captcha, input .captcha{
+    font-family: 'gothic';
 
+}
+.formulario label{
+}
+.formulario-main{
+    display: flex;
+
+    justify-content: center;
+
+}
+.formulario-main h3{
+ font-family: 'dm-serif-display-italic', 'Times New Roman', Times, serif;
+}
+.formulario-main h4{
+    font-family: 'gothic', 'Times New Roman', Times, serif;
+
+}
+.captcha button{
+    margin-top: 1em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: 'dm-sans', 'Times New Roman', Times, serif;
+    font-weight: bold;
+    border-color: #7f5550;
+    border-radius: 3px;
+    color: white;
+    background-color: #590C04;
+}
+#textocaptcha{
+    font-size: 2em;
+    font-family: 'dm-serif-display', 'Times New Roman', Times, serif;
+
+    margin-right: 0.5em;
+    margin-left: 0.3em;
+}
 
 footer{
 
