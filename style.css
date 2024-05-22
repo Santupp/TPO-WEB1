@@ -201,7 +201,7 @@ nav a img{
 
 .contenedor{
 display: grid;
-grid-template-columns: 1fr 1fr;
+grid-template-columns: 1fr;
 
 
 }
@@ -228,7 +228,6 @@ width: 80%;
 /*mystery box*/
 .mistery-box{
     border: 3px solid #FFF78A;
-    /* border-right: 3px solid #FFF78A; */
     border-radius: 8px;
     background-color: #F6F7C4;
     background-image: url("assets/img/question-mark.png");
@@ -305,6 +304,8 @@ td {
 .tabla {
     margin-bottom: 20px; /* Espacio en la parte de abajo de la tabla */
 }
+
+
 footer{
 
     margin-top: 1em;
@@ -322,12 +323,16 @@ footer a{
 
 /*media queries*/
 
+
+
 /*estilos para tablets pequeñas*/
+
 @media (width >= 620px){
     body{
-        margin: auto;
-        width: 800px;
     }
+
+
+
     .celular{
         width: 20%;
         height: 20%;
@@ -347,7 +352,12 @@ footer a{
         font-size: 1.5em;
         
     }
-
+    .contenedor{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+        
+        }
     
 }
 
