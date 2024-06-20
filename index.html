@@ -14,27 +14,22 @@
         <a href="index.html">
             <h1>Fuego <span>tiene</span> </h1>
         </a>
-        <div class="dropdown">
-            <button type="button" id="nav-btn-open" class="btn-menu">
-                <img src="assets/img/menu.png" alt=""> <span>Menu</span>
-            </button>
-        </div>
+<!-- <img src="assets/img/menu.png" alt=""> <span>Menu</span> -->
+
     </header>
-    <nav>
-        <div class="nav-list">
-            <ul id="nav-ul" class="hidden">
+    <nav id="nav" class="animation">
+        <button type="button" id="nav-btn">Abrir</button>
+        <div id="nav-container" class="nav-list">
+            <ul id="nav-ul" class="">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="productos.html">Productos</a></li>        
                 <li class="dark-mode-li">
-                    Modo oscuro 
-                    <button type="button" aria-label="dark mode button" title="dark mode button" id="dark-mode-btn" class="hidden">
-                            <img src="assets/img/dark-mode.png" alt="">
+                    <p>Modo oscuro </p>
+                    <button type="button" aria-label="dark mode button" title="dark mode button" id="dark-mode-btn" class="">
                     </button>
                 </li>
             </ul>
-            <button aria-label="menu button" title="menu button" type="button" id="nav-btn-close" class="hidden">
-                <img src="assets/img/menu.png" alt="">
-            </button>
+
         </div>
     </nav>
     <div class="mistery-box">

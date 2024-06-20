@@ -24,11 +24,12 @@ src: url('assets/fonts/DMSerifDisplay-Italic.ttf') format('truetype');
     color: #F9F6EE;
 }
 .dark-mode-li{
-    display: inline-block;
-    padding-right: 1.5em;
+    display: flex;
     font-weight: bold;
     font-family: 'dm-sans', 'Times New Roman', Times, serif;
     letter-spacing: 1px;
+
+    align-self: end;
     text-decoration: none;
     text-transform: uppercase;
     list-style: none;
@@ -36,13 +37,12 @@ src: url('assets/fonts/DMSerifDisplay-Italic.ttf') format('truetype');
 }
 #dark-mode-btn{
     background-color: #A62103;
+    background: url(assets/img/dark-mode.png);
+    background-size: 1.5em;
+    border: none;
     width: 1.5em;
     height: 1.5em;
     
-}
-#dark-mode-btn img{
-    width: 1.5em;
-    height: 1.5em;
 }
 /*Estilos de texto*/
 p{
@@ -88,45 +88,68 @@ header h1{
 .hidden{
     display: none;
 }
+.animation{
+    animation: slideIn 0.5s forwards;
+
+}
+@keyframes slideIn {
+        0% {
+            transform: translateX(-100%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes slideOut {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+    nav {
+    }
+
+    nav.hidden {
+        animation: slideOut 0.5s forwards;
+    }
 nav{
     text-decoration: none;
     border-bottom: 5px solid #A62103;
 
 }
-#nav-ul{
-    margin: 0.25em 1em 0 auto;
-    text-align: end;
-}
-.nav-list{
-    
-    display: flex;
-    flex-direction: column;
-    background-color: #A62103;
-}
+
 .nav-list button{
-    margin: 0 0 1em 0;
-    border: none;
-    position:absolute;
+
 }
+
 nav ul{
     display: flex;
     flex-direction: column;
+    text-align: end;
+    margin: 5px auto 2.5px auto;
     background: #A62103;
     border-top: 3px solid #A62103;
 }
 nav ul li{
     list-style-type: none;
+    
 }
 
 nav ul li a{
     font-weight: bold;
     font-family: 'dm-sans', 'Times New Roman', Times, serif;
     letter-spacing: 1px;
-    line-height: 1px;
     text-decoration: none;
     text-transform: uppercase;
     list-style: none;
     color: white;
+}
+nav p{
+    margin: 0;
 }
 nav a img{
     width: 1.5em;
@@ -415,6 +438,26 @@ footer a{
         margin: auto;
         width: 900px;
     }
+    #nav-btn{
+        display: none;
+    }
+    nav{
+        margin-bottom: 2em;
+        display: flex;
+        justify-content: center;
+        background-color: #A62103;
+        border-bottom: 5px solid #A62103;
+
+    }
+    nav ul{
+        display: flex;
+        flex-direction: row;
+    }
+    nav ul li{
+        padding-right: 2em;
+    }
+    nav ul li:last-child{
+    }
 }
 /*estilos para desktop*/
 
@@ -424,20 +467,9 @@ footer a{
         width: 800px;
     }
     /*nav*/
-    nav{
-        margin-bottom: 2em;
-        display: flex;
-        justify-content: center;
-        background-color: #A62103;
-        border-bottom: 5px solid #A62103;
 
-    }
-    nav ul li{
-        padding-right: 2em;
-    }
-    nav ul li:last-child{
-        padding-right: 0;
-    }
+
+
 
     
     .btn-menu {
@@ -446,9 +478,7 @@ footer a{
     #dark-mode-btn{
         display: inline-block;
     }
-    .dark-mode-li{
-        margin-right: 2em;
-    }
+
     ul.hidden {
         display: flex;
         flex-direction: row;
