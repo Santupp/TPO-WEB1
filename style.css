@@ -313,6 +313,21 @@ width: 80%;
 .descripcion-table{
     font-family: 'gothic', 'Times New Roman', Times, serif;
 }
+#tabla-info{
+    width: 50%;
+}
+.container-tabla-info{
+    overflow-x: auto;
+
+}
+.tabla-eliminar-btn{
+    width: 200px;
+}
+.tabla-option-btn{
+    width: 50px;
+
+}
+
 
 table {
     border: 2px solid rgba(247, 87, 87, 0.467);
@@ -346,8 +361,7 @@ td {
 .formulario label{
 }
 .formulario-main{
-    display: flex;
-
+    
     justify-content: center;
 
 }
