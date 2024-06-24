@@ -22,21 +22,18 @@
             </button>
         </div>
     </header>
-    <nav>
-        <div class="nav-list">
-            <ul id="nav-ul" class="hidden">
+    <nav id="nav" class="animation">
+        <button type="button" id="nav-btn">Abrir</button>
+        <div id="nav-container" class="nav-list">
+            <ul id="nav-ul" class="">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="productos.html">Productos</a></li>        
                 <li class="dark-mode-li">
-                    Modo oscuro 
-                    <button type="button" aria-label="dark mode button" title="dark mode button" id="dark-mode-btn" class="hidden">
-                            <img src="assets/img/dark-mode.png" alt="">
+                    <p>Modo oscuro &nbsp;</p>
+                    <button type="button" aria-label="dark mode button" title="dark mode button" id="dark-mode-btn" class="">
                     </button>
                 </li>
             </ul>
-            <button aria-label="menu button" title="menu button" type="button" id="nav-btn-close" class="hidden">
-                <img src="assets/img/menu.png" alt="">
-            </button>
         </div>
     </nav>
     <article class="main">
@@ -121,6 +118,8 @@
                 <th>Name</th>
                 <th>Email</th>
                 <th>Eliminar</th>
+                <th >Editar</th>
+
             </table>
         </div>
        
