@@ -3,30 +3,39 @@ let tablaInfo = document.getElementById("tabla-info");
 
 const url =  'https://6671f1bee083e62ee43da268.mockapi.io/user';
 
-form.addEventListener("submit", api);
-function api(event){
+form.addEventListener("submit", agregarUsuario);
+async function agregarUsuario(event) {
     event.preventDefault();
+
     let formData = new FormData(form);
-    let inputName = formData.get('name');
-    let inputEmail = formData.get('email');     
-    console.log(inputName);
-    console.log(inputEmail);
+    let nombreInput = formData.get('name');
+    let emailInput = formData.get('email');
 
-    
-    let data = [
-        {
-            name: inputName,
-            email: inputEmail
+    let dataToSend = {
+        name: nombreInput,
+        email: emailInput
+    };
+
+    try {
+        let response = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(dataToSend),
+        });
+        if(response.ok){
+            location.reload() // Si se ingresa un nuevo usuario la pagina se recarga.
         }
-    ]
+        else if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
 
-        tablaInfo.innerHTML += 
-                "<tr>" +
-                "<td class='tabla-nombre'>" + data[0].name + "</td>" +
-                "<td class='tabla-email'>" + data[0].email + "</td>" + 
-                "</tr>";    
+      
+    } catch (error) {
+        console.error('Error during the API call:', error);
     }
-    
+}
 
 cargarTabla();
 function cargarTabla(){
@@ -47,7 +56,7 @@ function cargarTabla(){
                         <input id='tabla-editar-nombre-${json[i].id}' class='tabla-editar-nombre' type='text'>
                         <label for='tabla-editar-email-${json[i].id}'>Email:</label>
                         <input id='tabla-editar-email-${json[i].id}' class='tabla-editar-email' type='text'>
-                        <button type='submit'>Guardar</button>
+                        <button class='tabla-submit-btn' type='submit'>Guardar</button>
                     </form>
                 </div>
                 </td>
@@ -82,8 +91,9 @@ function cargarTabla(){
             });
         });
 })
-    .catch(e => console.log(e));
-});
+})
+.catch(e => console.log(e));
+}
 
 
 
@@ -133,4 +143,4 @@ async function editar(id, nombreInput, emailInput) {
         console.error(error);
     }
 }
-}
+

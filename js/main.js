@@ -7,6 +7,7 @@ document.getElementById('formulario').addEventListener('submit', function (e) {
     let captchaUser = document.getElementById('textocaptcha').textContent;
     if (captchaValue == captchaUser) {
         document.getElementById('validacion').textContent = "El formulario se ha enviado correctamente";
+
     } else {
         document.getElementById('validacion').textContent = "Captcha incorrecto, intentalo nuevamente.";
     }
